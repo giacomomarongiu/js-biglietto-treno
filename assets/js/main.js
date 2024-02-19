@@ -1,7 +1,7 @@
 console.log("Ciao, il tuo js è ben collegato");
 
 
-/*- Dichiaro due variabili "eta" e "km" e specifico che mi serve un valore numerico
+/*- Dichiaro due variabili "age" e "km" e specifico che mi serve un valore numerico
 - Assegno loro un valore tramite promt*/
 
 
@@ -27,11 +27,11 @@ const formatter = new Intl.NumberFormat('it-IT', {
 
 console.log("Il prezzo pieno per il tuo biglietto è di ", formatter.format(total));
 
-//- Confronto il valore della variabile contentente "eta" con 18
+//- Confronto il valore della variabile contentente "age" con 18
 //- SE eta è SUPERIORE o UGUALE
 if (user_age >= 18) {
-    /*- - Confronto il valore della variabile contentente "eta" con 65
-    // - - SE "eta" è superiore applico a "total" uno sconto del 40% e lo mostro*/
+    /*- - Confronto il valore della variabile contentente "age" con 65
+    // - - SE "age" è superiore applico a "total" uno sconto del 40% e lo mostro*/
     if (user_age >= 65) {
         total =(total) - (total * 40 / 100) //Over 65 price
         console.log("Il prezzo scontato per il tuo biglietto è di ", formatter.format(total));
