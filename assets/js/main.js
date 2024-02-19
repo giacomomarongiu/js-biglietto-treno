@@ -81,7 +81,7 @@ const formatter = new Intl.NumberFormat('it-IT', {
 
 console.log("Il prezzo pieno per il tuo biglietto è di ", formatter.format(total));
 
-//Calcolo l'età dell'utente
+//Inserisco in una variabile la data di oggi
 const my_date = new Date();
 console.log("Bene, oggi è il ", my_date);
 
