@@ -13,6 +13,7 @@ Questo richiederà un minimo di ricerca - come quelle fatte in classe :wink:
 - Dichiaro due variabili "eta" e "km" e specifico che mi serve un valore numerico
 - Assegno loro un valore tramite promt
 - Calcolo quanto sarà la spesa totale sulla base di questi dati e lo assegno a una nuova variabile "total"
+- Specifico la formattazione con cui voglio visualizzare i numeri
 - Confronto il valore della variabile contentente "eta" con 18
 - SE l'età è SUPERIORE o UGUALE
 - - Confronto il valore della variabile contentente "eta" con 65
@@ -26,5 +27,6 @@ Questo richiederà un minimo di ricerca - come quelle fatte in classe :wink:
 variabili
 funzioni
 promnt
+Intl.NumberFormat object
 if else
-alert
+log

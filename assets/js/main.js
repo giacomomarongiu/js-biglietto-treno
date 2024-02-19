@@ -11,31 +11,38 @@ let user_km = Number(prompt("Inserisci la quantità di chilometri che desideri p
 
 console.log("Bene, hai inserito i seguenti valori", user_age, user_km);
 
-console.log(typeof user_age, typeof user_km); //Verify number type
+//console.log(typeof user_age, typeof user_km); Verify number type
 
 
 // - Calcolo quanto sarà la spesa totale sulla base di
 //questi dati e lo assegno a una nuova variabile "total"
 
-
 let total = (user_km * 0.21)
-console.log("Il prezzo pieno per il tuo biglietto è di ", total, "euro");
 
+//- Specifico la formattazione con cui voglio visualizzare i numeri
+const formatter = new Intl.NumberFormat('it-IT', {
+    style: 'currency',
+    currency: 'EUR',
+})
+
+console.log("Il prezzo pieno per il tuo biglietto è di ", formatter.format(total));
 
 //- Confronto il valore della variabile contentente "eta" con 18
-//- SE l'età è SUPERIORE o UGUALE
-
+//- SE eta è SUPERIORE o UGUALE
 if (user_age >= 18) {
     /*- - Confronto il valore della variabile contentente "eta" con 65
-    - - SE "eta" è superiore applico a "total" uno sconto del 40% e lo mostro
-    - - SE NO Visualizzo "total" senza sconti*/
+    // - - SE "eta" è superiore applico a "total" uno sconto del 40% e lo mostro*/
     if (user_age >= 65) {
-        total = (total * 40 / 100) //Over 65 price
+        total =(total) - (total * 40 / 100) //Over 65 price
+        console.log("Il prezzo scontato per il tuo biglietto è di ", formatter.format(total));
+        // - - SE NO Visualizzo "total" senza sconti
     } else {
         total = total //Full price
+        console.log("Peccato, non ti spetta nessuno sconto, pagherai", formatter.format(total));
     }
 } else {
-    total = (total * 20 / 100) // Under 18 price
-
+//- SE NO 
+    total = (total) - (total * 20 / 100) // Under 18 price
+    console.log("Il prezzo scontato per il tuo biglietto è di ", formatter.format(total));
 }
 
