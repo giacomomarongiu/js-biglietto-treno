@@ -40,6 +40,10 @@ document.querySelector('.btn_element').addEventListener('click', function () {
 
             recapElement.innerHTML += user_age;
 
+            let kmElement = document.querySelector('.recap_km')
+
+            kmElement.innerHTML += user_km;
+
             let ticketElement = document.querySelector('.ticket')
 
             ticketElement.innerHTML += total.toFixed(2)
@@ -53,14 +57,22 @@ document.querySelector('.btn_element').addEventListener('click', function () {
             total = total //Full price
             console.log("Peccato, non ti spetta nessuno sconto, pagherai", formatter.format(total));
 
-
+            
             let recapElement = document.querySelector('.recap')
 
-            recapElement.innerHTML += user_age + "anni e " + user_km + "chilometri"
+            recapElement.innerHTML += user_age;
+
+            let kmElement = document.querySelector('.recap_km')
+
+            kmElement.innerHTML += user_km;
 
             let ticketElement = document.querySelector('.ticket')
 
             ticketElement.innerHTML += total.toFixed(2)
+
+            let user_nameElement = document.querySelector('.my_user_name')
+
+            user_nameElement.innerHTML += user_name;
 
         }
     } else {
@@ -69,13 +81,22 @@ document.querySelector('.btn_element').addEventListener('click', function () {
         console.log("Il prezzo scontato per il tuo biglietto è di ", formatter.format(total));
 
 
+        
         let recapElement = document.querySelector('.recap')
 
-        recapElement.innerHTML += user_age + "anni e " + user_km + "chilometri"
+        recapElement.innerHTML += user_age;
+
+        let kmElement = document.querySelector('.recap_km')
+
+        kmElement.innerHTML += user_km;
 
         let ticketElement = document.querySelector('.ticket')
 
         ticketElement.innerHTML += total.toFixed(2)
+
+        let user_nameElement = document.querySelector('.my_user_name')
+
+        user_nameElement.innerHTML += user_name;
 
     }
 
