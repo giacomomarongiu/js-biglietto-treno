@@ -5,13 +5,29 @@ console.log("Ciao, il tuo js è ben collegato");
 //  - Assegno loro un valore tramite promt
 
 
-let user_age = Number(document.getElementById("my_user_age").value);
+let user_age = 0;
 
-let user_km = Number(document.getElementById("my_user_km").value);
+let user_km = 0;
+
+//- Creo una funzione dentro add.EventListener
+
+document.querySelector('.btn_age').addEventListener('click', function(){
+    let user_age = Number(document.getElementById("my_user_age").value);
+})
+
+document.querySelector('.btn_km').addEventListener('click', function(){
+    let user_km = Number(document.getElementById("my_user_km").value);
+})
+
 
 console.log("Bene, hai inserito i seguenti valori", user_age, user_km);
 
 //console.log(typeof user_age, typeof user_km); Verify number type
+
+
+
+
+
 
 
 // - Calcolo quanto sarà la spesa totale sulla base di
