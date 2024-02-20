@@ -5,9 +5,9 @@ console.log("Ciao, il tuo js è ben collegato");
 //  - Assegno loro un valore tramite promt
 
 
-let user_age = Number(document.getElementById("my_user_age"));
+let user_age = Number(document.getElementById("my_user_age").value);
 
-let user_km = Number(document.getElementById("my_user_km"));
+let user_km = Number(document.getElementById("my_user_km").value);
 
 console.log("Bene, hai inserito i seguenti valori", user_age, user_km);
 

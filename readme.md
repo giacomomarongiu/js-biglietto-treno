@@ -18,6 +18,7 @@ Nota: Se non vi sentite particolarmente creativi, questa potrebbe essere un’im
 ## Steps
 - Dichiaro due variabili "eta" e "km" e specifico che mi serve un valore numerico
 - Assegno loro un valore tramite l'input dell'html
+- Creo una funziona dentro add.EventListener
 - Calcolo quanto sarà la spesa totale sulla base di questi dati e lo assegno a una nuova variabile "total"
 - Specifico la formattazione con cui voglio visualizzare i numeri
 - Confronto il valore della variabile contentente "eta" con 18
@@ -31,7 +32,8 @@ Nota: Se non vi sentite particolarmente creativi, questa potrebbe essere un’im
 
 ### Tools
 variabili
-querySelector
+document.getElementById("").value
+add.EventListener
 Intl.NumberFormat object
 if else
 log
