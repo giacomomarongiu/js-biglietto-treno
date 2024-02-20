@@ -6,7 +6,7 @@ console.log("Ciao, il tuo js è ben collegato");
 
 
 let user_age;
-
+let user_name;
 let user_km;
 
 //- Creo una funzione dentro add.EventListener
@@ -14,7 +14,8 @@ let user_km;
 document.querySelector('.btn_element').addEventListener('click', function () {
     user_age = Number(document.getElementById("my_user_age").value);
     user_km = Number(document.getElementById("my_user_km").value);
-    console.log("Bene, hai inserito i seguenti valori", user_age, user_km);
+    user_name = document.getElementById("my_user_name").value;
+    console.log("Bene, hai inserito i seguenti valori", user_age, user_km, user_name);
     let total = (user_km * 0.21)
 
     //- Specifico la formattazione con cui voglio visualizzare i numeri
@@ -37,11 +38,15 @@ document.querySelector('.btn_element').addEventListener('click', function () {
 
             let recapElement = document.querySelector('.recap')
 
-            recapElement.innerHTML += user_age + "anni e " + user_km + "chilometri"
+            recapElement.innerHTML += user_age;
 
             let ticketElement = document.querySelector('.ticket')
 
-            ticketElement.innerHTML += total
+            ticketElement.innerHTML += total.toFixed(2)
+
+            let user_nameElement = document.querySelector('.my_user_name')
+
+            user_nameElement.innerHTML += user_name;
 
             // - - SE NO Visualizzo "total" senza sconti
         } else {
@@ -55,7 +60,7 @@ document.querySelector('.btn_element').addEventListener('click', function () {
 
             let ticketElement = document.querySelector('.ticket')
 
-            ticketElement.innerHTML += total
+            ticketElement.innerHTML += total.toFixed(2)
 
         }
     } else {
@@ -70,7 +75,7 @@ document.querySelector('.btn_element').addEventListener('click', function () {
 
         let ticketElement = document.querySelector('.ticket')
 
-        ticketElement.innerHTML += total
+        ticketElement.innerHTML += total.toFixed(2)
 
     }
 
